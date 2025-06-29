@@ -8,7 +8,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
 # Daten laden
-df = pd.read_csv("parkhaeuser_wetter_merged_allvars.csv")
+df = pd.read_csv("data.csv")
 features = ['temp', 'humidity', 'wind_speed', 'wind_gust', 'precip']
 target = 'Alsterhaus_auslastung'
 df_model = df.dropna(subset=features + [target])
