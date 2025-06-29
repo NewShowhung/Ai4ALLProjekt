@@ -1,0 +1,268 @@
+Parkhaus,Prädiktor,Coef,p-Wert
+Alsterhaus_auslastung,wind_dir,0.029117157490683294,1.1352994822604619e-09
+Alsterhaus_auslastung,wind_speed,5.9901721479524905,3.052228753610778e-162
+Alsterhaus_auslastung,wind_speed_min,5.854559422518466,8.38522431952792e-78
+Alsterhaus_auslastung,wind_speed_max,5.535454122956186,1.5467377549480986e-156
+Alsterhaus_auslastung,wind_gust,3.7857852956367473,7.912101794128534e-159
+Alsterhaus_auslastung,pressure,-0.5215790347883592,9.684516824730158e-08
+Alsterhaus_auslastung,humidity,-1.0446435211892566,0.0
+Alsterhaus_auslastung,temp,4.392946495049471,0.0
+Alsterhaus_auslastung,temp_min,4.32358373574556,0.0
+Alsterhaus_auslastung,temp_max,4.410143190779897,0.0
+Alsterhaus_auslastung,soiltemp,3.2705644476831064,0.0
+Alter Wall / BUCERIUS-Passage_auslastung,wind_dir,0.024552388083002055,1.0515463995569585e-11
+Alter Wall / BUCERIUS-Passage_auslastung,wind_speed,3.8900744637210924,9.9419930631583e-118
+Alter Wall / BUCERIUS-Passage_auslastung,wind_speed_min,3.8294151846202333,3.350661391020484e-58
+Alter Wall / BUCERIUS-Passage_auslastung,wind_speed_max,3.592490974513629,1.5027907703556602e-113
+Alter Wall / BUCERIUS-Passage_auslastung,wind_gust,2.5085189305428073,2.8263013092131145e-120
+Alter Wall / BUCERIUS-Passage_auslastung,humidity,-0.7739578653344065,0.0
+Alter Wall / BUCERIUS-Passage_auslastung,temp,2.0942538231036933,3.3289510139416635e-141
+Alter Wall / BUCERIUS-Passage_auslastung,temp_min,2.018279060987942,6.128737975666419e-128
+Alter Wall / BUCERIUS-Passage_auslastung,temp_max,2.1374242679581914,1.8486174768473333e-152
+Alter Wall / BUCERIUS-Passage_auslastung,soiltemp,1.802353522018805,4.307736345437278e-269
+Am Hauptbahnhof_auslastung,wind_dir,0.011780285849546423,4.165407482833704e-08
+Am Hauptbahnhof_auslastung,wind_speed,-0.5467098603926336,1.1452684939773372e-07
+Am Hauptbahnhof_auslastung,wind_speed_min,-0.7139732093538534,6.39560474348438e-07
+Am Hauptbahnhof_auslastung,wind_speed_max,-0.4468790592238028,4.0171402077820925e-06
+Am Hauptbahnhof_auslastung,wind_gust,-0.23858656150146937,0.00029237731484774566
+Am Hauptbahnhof_auslastung,humidity,-0.047522346457072345,7.93530799805255e-05
+Am Hauptbahnhof_auslastung,temp,0.1994692553603691,9.059815865514333e-05
+Am Hauptbahnhof_auslastung,temp_min,0.2092443654316685,4.766201876917573e-05
+Am Hauptbahnhof_auslastung,temp_max,0.20103283177296044,6.138676515084573e-05
+City-Parkhaus_auslastung,wind_dir,0.059480067323111056,2.2627035856800506e-100
+City-Parkhaus_auslastung,wind_speed,0.9853907339309047,7.090080388962259e-13
+City-Parkhaus_auslastung,wind_speed_max,0.4639877479807515,0.00033195745719199056
+City-Parkhaus_auslastung,wind_gust,0.27160955268763787,0.0019866567762809794
+City-Parkhaus_auslastung,pressure,-0.6571526584276381,1.5518092459134092e-29
+City-Parkhaus_auslastung,humidity,-0.16262446172881462,2.4256866025937623e-24
+City-Parkhaus_auslastung,temp,0.6084397537442391,2.480110380528531e-19
+City-Parkhaus_auslastung,temp_min,0.6010807130907552,1.4545043506389642e-18
+City-Parkhaus_auslastung,temp_max,0.6368860259674537,1.1352938391079136e-21
+City-Parkhaus_auslastung,soiltemp,0.34082339862073396,4.492684483533192e-15
+Deichtorhallen_auslastung,wind_speed,4.017395139334317,6.473175280307274e-92
+Deichtorhallen_auslastung,wind_speed_min,2.2404525482734488,1.2773899466223592e-15
+Deichtorhallen_auslastung,wind_speed_max,3.7302729647489894,1.0601690791907301e-89
+Deichtorhallen_auslastung,wind_gust,2.7505418118051237,3.1608863991665234e-106
+Deichtorhallen_auslastung,pressure,-0.7297730462102743,1.7982915036142683e-17
+Deichtorhallen_auslastung,humidity,-0.7024682141440016,4.026930572647343e-217
+Deichtorhallen_auslastung,temp,2.971809907727111,5.176680741220359e-217
+Deichtorhallen_auslastung,temp_min,2.8762809736766335,1.2922923426468984e-197
+Deichtorhallen_auslastung,temp_max,2.963854214313392,2.3975265673762423e-223
+Deichtorhallen_auslastung,soiltemp,2.245817597116421,0.0
+Deutsch Japanisches Zentrum_auslastung,wind_dir,0.019844779615656786,6.773991757028101e-05
+Deutsch Japanisches Zentrum_auslastung,wind_speed,6.875716740336079,7.051873333133719e-201
+Deutsch Japanisches Zentrum_auslastung,wind_speed_min,7.011582855152415,7.936919536714902e-104
+Deutsch Japanisches Zentrum_auslastung,wind_speed_max,6.254867524075921,3.980953420815415e-187
+Deutsch Japanisches Zentrum_auslastung,wind_gust,4.221284466220786,1.7459118496923397e-184
+Deutsch Japanisches Zentrum_auslastung,pressure,-1.638972354417194,6.683503427444651e-60
+Deutsch Japanisches Zentrum_auslastung,humidity,-0.558586683564995,3.0895411999308094e-93
+Deutsch Japanisches Zentrum_auslastung,temp,3.3263184898310922,5.062868858838767e-192
+Deutsch Japanisches Zentrum_auslastung,temp_min,3.2762831355666204,7.158123424946562e-182
+Deutsch Japanisches Zentrum_auslastung,temp_max,3.289480260982367,6.500224459970388e-194
+Deutsch Japanisches Zentrum_auslastung,soiltemp,2.7150778931153137,0.0
+Elbarkaden_auslastung,wind_dir,0.014887342206532867,4.16736615156846e-05
+Elbarkaden_auslastung,wind_speed,2.0945693524175715,1.0323865186336006e-33
+Elbarkaden_auslastung,wind_speed_min,2.340027331614916,3.173926081083388e-22
+Elbarkaden_auslastung,wind_speed_max,1.9991101281187438,9.557320758357444e-35
+Elbarkaden_auslastung,wind_gust,1.3361085185767871,1.1333202351357136e-33
+Elbarkaden_auslastung,pressure,1.1857739502700197,6.128182018951936e-59
+Elbarkaden_auslastung,humidity,-0.5963799601410996,2.155233778531361e-209
+Elbarkaden_auslastung,temp,2.1492953933801666,7.71870030733747e-148
+Elbarkaden_auslastung,temp_min,2.0594383234337643,2.787737067972027e-132
+Elbarkaden_auslastung,temp_max,2.1502360518151806,5.439992781222488e-153
+Elbarkaden_auslastung,soiltemp,1.8419976780881444,4.603391327180539e-280
+Elbphilharmonie_auslastung,wind_speed,2.455940025288147,3.5415204221437957e-57
+Elbphilharmonie_auslastung,wind_speed_min,2.895597131062719,2.768939378270869e-41
+Elbphilharmonie_auslastung,wind_speed_max,2.6998666442662924,2.0468924596237138e-78
+Elbphilharmonie_auslastung,wind_gust,1.834764618970466,1.7594556809861542e-78
+Elbphilharmonie_auslastung,pressure,-0.3528252691131094,1.1181154950106925e-07
+Elbphilharmonie_auslastung,humidity,-0.43566206963057463,8.099852898341502e-135
+Elbphilharmonie_auslastung,temp,1.6301584903277693,3.0752960081807956e-104
+Elbphilharmonie_auslastung,temp_min,1.6962405980619886,6.159178421819723e-111
+Elbphilharmonie_auslastung,temp_max,1.6260283275630978,4.1988195448088606e-107
+Elbphilharmonie_auslastung,soiltemp,0.8425779769809577,4.610937987864145e-67
+Europa-Passage_auslastung,wind_dir,0.01572019434618509,0.0003402943785718417
+Europa-Passage_auslastung,wind_speed,5.935337265173895,3.4212233057188133e-192
+Europa-Passage_auslastung,wind_speed_min,6.237553164968349,5.452914705983735e-106
+Europa-Passage_auslastung,wind_speed_max,5.569728281396864,1.21648600560721e-191
+Europa-Passage_auslastung,wind_gust,3.806498239656245,3.3473757293445905e-194
+Europa-Passage_auslastung,pressure,-0.3331505435373349,0.00020418486860959882
+Europa-Passage_auslastung,humidity,-0.9803913264876173,0.0
+Europa-Passage_auslastung,temp,3.7564982002046468,0.0
+Europa-Passage_auslastung,temp_min,3.68020520384838,0.0
+Europa-Passage_auslastung,temp_max,3.7789850344836706,0.0
+Europa-Passage_auslastung,soiltemp,2.8816727619421836,0.0
+Große Reichenstraße_auslastung,wind_dir,0.006197043675422169,1.0519784670381658e-05
+Große Reichenstraße_auslastung,wind_speed_min,-0.33827055591811156,0.0003147327060125344
+Große Reichenstraße_auslastung,pressure,-0.4296996422889501,1.164279728776793e-51
+Große Reichenstraße_auslastung,humidity,0.05370094688635446,8.633770113943157e-12
+Große Reichenstraße_auslastung,temp,0.2399687099280656,5.495905045221816e-13
+Große Reichenstraße_auslastung,temp_min,0.2537463103679883,4.195132052204177e-14
+Große Reichenstraße_auslastung,temp_max,0.22753176602968356,3.791124305822825e-12
+Große Reichenstraße_auslastung,soiltemp,0.06702028117420335,0.0017349570994620862
+Gänsemarkt_auslastung,wind_dir,0.00498715839719031,0.004728520227085362
+Gänsemarkt_auslastung,wind_speed,1.0127296437186717,2.0372085279639528e-33
+Gänsemarkt_auslastung,wind_speed_min,0.4274126179215824,0.00028442262132654246
+Gänsemarkt_auslastung,wind_speed_max,0.9312385037067138,4.7134056519730015e-32
+Gänsemarkt_auslastung,wind_gust,0.6245758067716645,2.815369589114317e-31
+Gänsemarkt_auslastung,pressure,-0.46261563834726616,2.911550366828465e-38
+Gänsemarkt_auslastung,humidity,-0.13823279190055093,2.3959732757266224e-45
+Gänsemarkt_auslastung,temp,0.8162617119319975,1.7575536254896135e-88
+Gänsemarkt_auslastung,temp_min,0.814548662542571,2.3042282904014104e-86
+Gänsemarkt_auslastung,temp_max,0.8162758105541384,2.3100329007479008e-91
+Gänsemarkt_auslastung,soiltemp,0.6186013964053996,5.703601408120333e-125
+Hafentor_auslastung,wind_dir,-0.13979397118211856,8.015782964295831e-115
+Hafentor_auslastung,wind_speed,-2.2342841031760434,1.4738807270793065e-13
+Hafentor_auslastung,wind_speed_min,1.0865683540602358,0.009951835238700383
+Hafentor_auslastung,wind_speed_max,-1.0672797615461502,0.00017826280879304146
+Hafentor_auslastung,wind_gust,-1.013888314041862,1.559072801717841e-07
+Hafentor_auslastung,pressure,4.924758134629833,0.0
+Hafentor_auslastung,humidity,-0.5817323906751353,1.4009661432051472e-62
+Hafentor_auslastung,temp,0.8419712911379967,1.784483634582273e-08
+Hafentor_auslastung,temp_min,0.8636701772996486,1.0578427597691231e-08
+Hafentor_auslastung,temp_max,0.9063556817820471,7.278472189897212e-10
+Hafentor_auslastung,soiltemp,0.5443109004657547,1.387773232749643e-08
+Hanse-Viertel_auslastung,wind_dir,-0.012671727327760618,1.6454588256965502e-10
+Hanse-Viertel_auslastung,wind_speed,2.058800244718486,4.07257226032672e-109
+Hanse-Viertel_auslastung,wind_speed_min,2.8569426799358633,1.151588377169409e-108
+Hanse-Viertel_auslastung,wind_speed_max,2.089618844861784,3.2634287532301266e-128
+Hanse-Viertel_auslastung,wind_gust,1.3455410234484502,1.2751793641466725e-114
+Hanse-Viertel_auslastung,pressure,0.11361782554938042,0.005146518408916469
+Hanse-Viertel_auslastung,humidity,-0.30945984870557897,7.332664189848962e-187
+Hanse-Viertel_auslastung,temp,1.276006764184955,1.2485872994312926e-176
+Hanse-Viertel_auslastung,temp_min,1.2662056112654607,4.378927815782766e-170
+Hanse-Viertel_auslastung,temp_max,1.2756778509975581,1.2748338019408506e-182
+Hanse-Viertel_auslastung,soiltemp,1.0154173346144117,1.0420331595521518e-285
+Holzdamm / Ibis_auslastung,wind_speed,-0.375703967709231,0.0006213842860355599
+Holzdamm / Ibis_auslastung,wind_speed_max,-0.3313979433133371,0.0013171575434356316
+Holzdamm / Ibis_auslastung,wind_gust,-0.2827488189925683,5.438620657443793e-05
+Holzdamm / Ibis_auslastung,pressure,0.3886785417203383,7.549423877078452e-17
+Kaufhof (Galeria Kaufhof)_auslastung,wind_dir,0.005111653814187373,0.0008094625682064612
+Kaufhof (Galeria Kaufhof)_auslastung,wind_speed,2.079379154721585,2.4347219615434713e-195
+Kaufhof (Galeria Kaufhof)_auslastung,wind_speed_min,2.1466674613102463,9.918632241654397e-104
+Kaufhof (Galeria Kaufhof)_auslastung,wind_speed_max,1.9155771374020276,4.560676686884568e-187
+Kaufhof (Galeria Kaufhof)_auslastung,wind_gust,1.3040292450975264,6.08103504235435e-188
+Kaufhof (Galeria Kaufhof)_auslastung,pressure,-0.4658883330392653,1.2546013263332677e-51
+Kaufhof (Galeria Kaufhof)_auslastung,humidity,-0.2609037761196859,2.5026859648152556e-229
+Kaufhof (Galeria Kaufhof)_auslastung,temp,1.1928349097585027,3.047480988244558e-273
+Kaufhof (Galeria Kaufhof)_auslastung,temp_min,1.1649556979705016,3.2784327218548065e-253
+Kaufhof (Galeria Kaufhof)_auslastung,temp_max,1.1901630735054427,8.966664814772941e-282
+Kaufhof (Galeria Kaufhof)_auslastung,soiltemp,0.9354394839000193,0.0
+Marriott_auslastung,wind_dir,0.03192642599070757,1.4023193095820502e-19
+Marriott_auslastung,wind_speed_min,-0.5247369422177623,0.026434618458544605
+Marriott_auslastung,pressure,0.7225575648449561,1.1116748791829407e-23
+Marriott_auslastung,humidity,-0.17801583287764558,2.0402656428999705e-19
+Marriott_auslastung,temp,0.5428891079350897,9.174568233956529e-11
+Marriott_auslastung,temp_min,0.5276547914747548,4.489025210486893e-10
+Marriott_auslastung,temp_max,0.5624374675184899,9.06077461695348e-12
+Marriott_auslastung,soiltemp,0.44769493173727737,7.293592735572736e-17
+Mercado (Einkaufszentrum)_auslastung,wind_dir,0.011726998259665986,0.00026328924294075697
+Mercado (Einkaufszentrum)_auslastung,wind_speed,4.307980037591984,1.9913334340689884e-188
+Mercado (Einkaufszentrum)_auslastung,wind_speed_min,4.397284560099575,6.112537220954077e-98
+Mercado (Einkaufszentrum)_auslastung,wind_speed_max,3.9847716860433318,4.435959870350152e-182
+Mercado (Einkaufszentrum)_auslastung,wind_gust,2.741307161220426,3.6114350844324817e-187
+Mercado (Einkaufszentrum)_auslastung,humidity,-0.739230782488965,0.0
+Mercado (Einkaufszentrum)_auslastung,temp,2.631354613681923,3.861173344130168e-304
+Mercado (Einkaufszentrum)_auslastung,temp_min,2.5662976059978537,1.4013622572514875e-280
+Mercado (Einkaufszentrum)_auslastung,temp_max,2.646246066202481,0.0
+Mercado (Einkaufszentrum)_auslastung,soiltemp,2.127585735422202,0.0
+Messe-Mitte_auslastung,wind_dir,0.003926061806446117,0.013802229016400065
+Messe-Mitte_auslastung,wind_speed,0.5284629793044818,4.440195134756124e-12
+Messe-Mitte_auslastung,wind_speed_min,0.2580742717148137,0.015288012203898641
+Messe-Mitte_auslastung,wind_speed_max,0.49554525684345263,4.9094928838282914e-12
+Messe-Mitte_auslastung,wind_gust,0.33760820298788413,4.252630207669177e-12
+Messe-Mitte_auslastung,pressure,0.23081336800898739,1.2606283828049355e-12
+Messe-Mitte_auslastung,humidity,-0.09073112816760293,1.670044770462834e-24
+Messe-Mitte_auslastung,temp,0.5644411807058279,1.0896865830535706e-51
+Messe-Mitte_auslastung,temp_min,0.5545566735889689,5.825951721293099e-49
+Messe-Mitte_auslastung,temp_max,0.5588760582569647,2.8144980122478413e-52
+Messe-Mitte_auslastung,soiltemp,0.4297912339109186,7.81594651008933e-73
+Messe-Ost_auslastung,wind_speed,0.6681369600985173,1.443870282029175e-14
+Messe-Ost_auslastung,wind_speed_min,0.35395304473933975,0.003473271967941829
+Messe-Ost_auslastung,wind_speed_max,0.6072976898513415,1.0103564461629094e-13
+Messe-Ost_auslastung,wind_gust,0.5187223148234117,7.13618226233868e-21
+Messe-Ost_auslastung,pressure,-0.1870507431541223,4.515661961852848e-07
+Messe-Ost_auslastung,humidity,-0.05183668085577867,3.319343207165332e-07
+Messe-Ost_auslastung,temp,0.1463075138945436,0.0006692128991418267
+Messe-Ost_auslastung,temp_min,0.15119547736020103,0.0004984507300089555
+Messe-Ost_auslastung,temp_max,0.13441054063305335,0.0015026244736474402
+Messe-Ost_auslastung,soiltemp,0.10787650236982815,9.21166442619854e-05
+Michel-Garage_auslastung,wind_dir,0.007168353350367642,3.300828074084969e-05
+Michel-Garage_auslastung,wind_speed,0.21787081154092913,0.008598574721704961
+Michel-Garage_auslastung,wind_speed_max,0.3025176600526415,0.00010245878727623155
+Michel-Garage_auslastung,wind_gust,0.27025658711867556,3.186746674158231e-07
+Michel-Garage_auslastung,pressure,-0.1997420066499521,1.4862099068348342e-08
+Michel-Garage_auslastung,humidity,-0.18035117686149169,1.291755290923617e-80
+Michel-Garage_auslastung,temp,1.1812936901837663,1.8197134301214662e-202
+Michel-Garage_auslastung,temp_min,1.2033301565505352,2.0846620216556228e-206
+Michel-Garage_auslastung,temp_max,1.1686644079016537,1.1975582642757582e-204
+Michel-Garage_auslastung,soiltemp,0.5741187553502534,7.1502418473983155e-112
+Millerntor_auslastung,wind_dir,-0.06914130539055166,8.446899686550829e-82
+Millerntor_auslastung,wind_speed,-2.522696651128005,3.1360608355315926e-47
+Millerntor_auslastung,wind_speed_max,-1.8279361417604023,1.6126103967339265e-28
+Millerntor_auslastung,wind_gust,-1.4685820380024213,1.9819483041134153e-39
+Millerntor_auslastung,pressure,3.5125877417376143,0.0
+Millerntor_auslastung,humidity,-0.2587671689587961,1.0791530523480622e-36
+Millerntor_auslastung,temp,-0.1772182163667741,0.04237346701781913
+Parkhaus Stadthöfe (Bleichenhof)_auslastung,wind_dir,0.00939865044602869,3.802238427451302e-16
+Parkhaus Stadthöfe (Bleichenhof)_auslastung,wind_speed,1.2164419741936148,2.994970579234912e-112
+Parkhaus Stadthöfe (Bleichenhof)_auslastung,wind_speed_min,1.1692564712124085,4.88944482356163e-53
+Parkhaus Stadthöfe (Bleichenhof)_auslastung,wind_speed_max,1.1540026246018762,1.6388598266348485e-114
+Parkhaus Stadthöfe (Bleichenhof)_auslastung,wind_gust,0.7597056021132315,2.807527583991243e-107
+Parkhaus Stadthöfe (Bleichenhof)_auslastung,humidity,-0.20201486122304949,3.708322711048265e-240
+Parkhaus Stadthöfe (Bleichenhof)_auslastung,temp,0.8377134013671838,1.657337118346129e-229
+Parkhaus Stadthöfe (Bleichenhof)_auslastung,temp_min,0.8244347901570446,1.0024917406411561e-216
+Parkhaus Stadthöfe (Bleichenhof)_auslastung,temp_max,0.8440875756069143,9.007834444464322e-242
+Parkhaus Stadthöfe (Bleichenhof)_auslastung,soiltemp,0.6214384934539742,0.0
+Radison Blu_auslastung,wind_dir,0.008256934651994684,9.004612393784212e-05
+Radison Blu_auslastung,wind_speed,1.4319957598528552,2.0997710618545857e-46
+Radison Blu_auslastung,wind_speed_min,1.5258648599973457,1.0551938781778514e-27
+Radison Blu_auslastung,wind_speed_max,1.2827738022004869,3.006774097919825e-42
+Radison Blu_auslastung,wind_gust,0.8273483251243332,3.5151986731830227e-38
+Radison Blu_auslastung,pressure,-1.0137710854657285,2.650158995163251e-130
+Radison Blu_auslastung,temp,0.2628164721264779,1.4184074281268367e-07
+Radison Blu_auslastung,temp_min,0.2605774286999258,2.376810925267054e-07
+Radison Blu_auslastung,temp_max,0.25890316238973254,1.3936918038401586e-07
+Radison Blu_auslastung,soiltemp,0.2043928134177031,1.7220118854085023e-10
+Reeperbahn-Garagen (Spielbudenplatz)_auslastung,wind_speed,1.9335449664481852,6.490239207903329e-21
+Reeperbahn-Garagen (Spielbudenplatz)_auslastung,wind_speed_min,3.439294093978889,2.1781346051264436e-33
+Reeperbahn-Garagen (Spielbudenplatz)_auslastung,wind_speed_max,2.3015556485583244,9.178894840802525e-33
+Reeperbahn-Garagen (Spielbudenplatz)_auslastung,wind_gust,1.3993459262037364,1.6929554597870866e-26
+Reeperbahn-Garagen (Spielbudenplatz)_auslastung,pressure,0.5103656247001188,6.819585951873987e-09
+Reeperbahn-Garagen (Spielbudenplatz)_auslastung,humidity,-0.6842751245099429,2.2519083211964494e-194
+Reeperbahn-Garagen (Spielbudenplatz)_auslastung,temp,3.0673388258779055,9.24600839362349e-221
+Reeperbahn-Garagen (Spielbudenplatz)_auslastung,temp_min,3.1406803285005735,1.0479722029162498e-227
+Reeperbahn-Garagen (Spielbudenplatz)_auslastung,temp_max,3.039928591151628,4.763309169008977e-224
+Reeperbahn-Garagen (Spielbudenplatz)_auslastung,soiltemp,1.4751014886487503,9.818298375498635e-119
+Rödingsmarkt_auslastung,wind_dir,0.016098324177334537,2.3103701532095934e-18
+Rödingsmarkt_auslastung,wind_speed,0.9225852722036861,1.3590568128827367e-25
+Rödingsmarkt_auslastung,wind_speed_min,0.3482275345147454,0.004766318848468511
+Rödingsmarkt_auslastung,wind_speed_max,0.8508302305325968,1.0557622957948138e-24
+Rödingsmarkt_auslastung,wind_gust,0.6909686411254269,9.151814637802112e-35
+Rödingsmarkt_auslastung,pressure,-0.8807420352044192,6.64257531201402e-128
+Rödingsmarkt_auslastung,temp,0.4060816395126416,1.2936268097024282e-20
+Rödingsmarkt_auslastung,temp_min,0.4130623948376016,6.743341328653127e-21
+Rödingsmarkt_auslastung,temp_max,0.4022487589801598,7.494556085196474e-21
+Rödingsmarkt_auslastung,soiltemp,0.23383968199304284,6.996812940757446e-17
+Speicherstadt_auslastung,wind_dir,0.014191827406184687,1.5496520594352365e-05
+Speicherstadt_auslastung,wind_speed,4.582173786748133,1.2804466680802728e-205
+Speicherstadt_auslastung,wind_speed_min,4.440985549207471,1.5265721052174584e-95
+Speicherstadt_auslastung,wind_speed_max,4.241995795975457,5.387866636724738e-199
+Speicherstadt_auslastung,wind_gust,2.9228594568352406,2.515290387763687e-205
+Speicherstadt_auslastung,pressure,-1.206984934886473,8.18233399648733e-75
+Speicherstadt_auslastung,humidity,-0.6915138993747301,0.0
+Speicherstadt_auslastung,temp,3.3551319735764613,0.0
+Speicherstadt_auslastung,temp_min,3.3285470886531243,0.0
+Speicherstadt_auslastung,temp_max,3.3450806966175906,0.0
+Speicherstadt_auslastung,soiltemp,2.24981286940709,0.0
+Überseequartier Nord_auslastung,wind_dir,0.038788157544591105,1.7196349853956435e-26
+Überseequartier Nord_auslastung,wind_speed,6.089494420541641,3.7098841352426863e-306
+Überseequartier Nord_auslastung,wind_speed_min,4.202216751883262,2.033455121498643e-68
+Überseequartier Nord_auslastung,wind_speed_max,5.510875241628018,1.348679291594049e-280
+Überseequartier Nord_auslastung,wind_gust,3.875613029450871,4.30870528204113e-304
+Überseequartier Nord_auslastung,pressure,-2.2297149591517074,5.5095715119918954e-217
+Überseequartier Nord_auslastung,humidity,-0.447686425404977,1.8173947896789477e-111
+Überseequartier Nord_auslastung,temp,2.7947694282458677,1.3262337802181127e-258
+Überseequartier Nord_auslastung,temp_min,2.771373671759584,3.523266142658875e-248
+Überseequartier Nord_auslastung,temp_max,2.7717721176264223,5.714051366663748e-263
+Überseequartier Nord_auslastung,soiltemp,1.937368941303488,3.62011299400397e-309

@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5a33d320d361be30fd2e887835a53cfd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed;
+    bottom: 50px; left: 50px;
+    width: 240px; height: auto;
+    background-color: white;
+    border:2px solid grey;
+    z-index:9999;
+    font-size:14px;
+    padding: 10px;
+    ">
+<b>Cluster-Legende</b><br>
+<i style="background:red;width:12px;height:12px;display:inline-block;margin-right:5px;"></i> <b>Cluster 0:</b> 7 Parkhäuser, Ø-Preis: 2.57 €/h<br><i style="background:blue;width:12px;height:12px;display:inline-block;margin-right:5px;"></i> <b>Cluster 1:</b> 24 Parkhäuser, Ø-Preis: 2.54 €/h<br><i style="background:green;width:12px;height:12px;display:inline-block;margin-right:5px;"></i> <b>Cluster 2:</b> 10 Parkhäuser, Ø-Preis: 1.49 €/h<br><i style="background:orange;width:12px;height:12px;display:inline-block;margin-right:5px;"></i> <b>Cluster 3:</b> 6 Parkhäuser, Ø-Preis: 1.18 €/h<br><i style="background:purple;width:12px;height:12px;display:inline-block;margin-right:5px;"></i> <b>Cluster 4:</b> 14 Parkhäuser, Ø-Preis: 4.21 €/h<br></div>
+    
+            <div class="folium-map" id="map_5a33d320d361be30fd2e887835a53cfd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5a33d320d361be30fd2e887835a53cfd = L.map(
+                "map_5a33d320d361be30fd2e887835a53cfd",
+                {
+                    center: [53.55800681372325, 9.986188927676432],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1b9385fde0978973bf137631a46ca9df = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+            var circle_marker_8d86236a2aa638c92e5279fabd1cfc86 = L.circleMarker(
+                [53.552668636813, 9.991765368166394],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_e500f351ee1468ffbae786d834e18c4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52f8a51d93c0200e4bcfd36d51923088 = $(`<div id="html_52f8a51d93c0200e4bcfd36d51923088" style="width: 100.0%; height: 100.0%;"><b>Alsterhaus</b><br>Cluster: 4<br>Ø-Preis: 4.00 €/h</div>`)[0];
+            popup_e500f351ee1468ffbae786d834e18c4d.setContent(html_52f8a51d93c0200e4bcfd36d51923088);
+        
+
+        circle_marker_8d86236a2aa638c92e5279fabd1cfc86.bindPopup(popup_e500f351ee1468ffbae786d834e18c4d)
+        ;
+
+        
+    
+    
+            var circle_marker_1befd522e5e827efdd33777a5a156199 = L.circleMarker(
+                [53.55055948063883, 9.990806413949135],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_98952836db73c1b1cab4e834d0ebcf00 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5eef36b65caa85683254ae28ca2e63fc = $(`<div id="html_5eef36b65caa85683254ae28ca2e63fc" style="width: 100.0%; height: 100.0%;"><b>Alter Wall / BUCERIUS-Passage</b><br>Cluster: 4<br>Ø-Preis: 3.90 €/h</div>`)[0];
+            popup_98952836db73c1b1cab4e834d0ebcf00.setContent(html_5eef36b65caa85683254ae28ca2e63fc);
+        
+
+        circle_marker_1befd522e5e827efdd33777a5a156199.bindPopup(popup_98952836db73c1b1cab4e834d0ebcf00)
+        ;
+
+        
+    
+    
+            var circle_marker_2cc99af4b7c5d4b203d2462f6fc606d5 = L.circleMarker(
+                [53.55472284032642, 10.009583216031292],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_365908522dc21e95fcc9973a2fe06692 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e8325bac30f881379c079f480e4a771 = $(`<div id="html_9e8325bac30f881379c079f480e4a771" style="width: 100.0%; height: 100.0%;"><b>Am Hauptbahnhof</b><br>Cluster: 4<br>Ø-Preis: 4.00 €/h</div>`)[0];
+            popup_365908522dc21e95fcc9973a2fe06692.setContent(html_9e8325bac30f881379c079f480e4a771);
+        
+
+        circle_marker_2cc99af4b7c5d4b203d2462f6fc606d5.bindPopup(popup_365908522dc21e95fcc9973a2fe06692)
+        ;
+
+        
+    
+    
+            var circle_marker_df88e43c94a7931615825a53a1ef3d61 = L.circleMarker(
+                [53.55300881823601, 9.934095252127486],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_f0bb2dd4bfea8494eeee93056c0fd6d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_232521eb860d9b4a3666678444b8344d = $(`<div id="html_232521eb860d9b4a3666678444b8344d" style="width: 100.0%; height: 100.0%;"><b>Bahnhof Altona</b><br>Cluster: 2<br>Ø-Preis: 1.30 €/h</div>`)[0];
+            popup_f0bb2dd4bfea8494eeee93056c0fd6d0.setContent(html_232521eb860d9b4a3666678444b8344d);
+        
+
+        circle_marker_df88e43c94a7931615825a53a1ef3d61.bindPopup(popup_f0bb2dd4bfea8494eeee93056c0fd6d0)
+        ;
+
+        
+    
+    
+            var circle_marker_b7bedb432413f48a4e43f923fa2dd766 = L.circleMarker(
+                [53.54788810391247, 9.966681013055734],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_4440b0324349d2456afe1b038cf0fa25 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5f7beef83fd5f063278b213bfc51aa8 = $(`<div id="html_f5f7beef83fd5f063278b213bfc51aa8" style="width: 100.0%; height: 100.0%;"><b>Bavaria Office</b><br>Cluster: 2<br>Ø-Preis: 1.50 €/h</div>`)[0];
+            popup_4440b0324349d2456afe1b038cf0fa25.setContent(html_f5f7beef83fd5f063278b213bfc51aa8);
+        
+
+        circle_marker_b7bedb432413f48a4e43f923fa2dd766.bindPopup(popup_4440b0324349d2456afe1b038cf0fa25)
+        ;
+
+        
+    
+    
+            var circle_marker_88789628ac739c2e9d7c18bff60dc63a = L.circleMarker(
+                [53.5566768154406, 10.021679349930375],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_696973a53770d0f698ca8e817cb148a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_244583a98534e3f3f1667a2e41430a2a = $(`<div id="html_244583a98534e3f3f1667a2e41430a2a" style="width: 100.0%; height: 100.0%;"><b>Berliner Tor</b><br>Cluster: 1<br>Ø-Preis: 2.80 €/h</div>`)[0];
+            popup_696973a53770d0f698ca8e817cb148a7.setContent(html_244583a98534e3f3f1667a2e41430a2a);
+        
+
+        circle_marker_88789628ac739c2e9d7c18bff60dc63a.bindPopup(popup_696973a53770d0f698ca8e817cb148a7)
+        ;
+
+        
+    
+    
+            var circle_marker_f42f9b131004fe11c0b4dde19bd27a26 = L.circleMarker(
+                [53.55293155535127, 10.000791980338334],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_69deff9b7a2c41aa9d6c788565b49fa2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_efd143296f08e159e0e992e35491236e = $(`<div id="html_efd143296f08e159e0e992e35491236e" style="width: 100.0%; height: 100.0%;"><b>City-Parkhaus</b><br>Cluster: 1<br>Ø-Preis: 3.30 €/h</div>`)[0];
+            popup_69deff9b7a2c41aa9d6c788565b49fa2.setContent(html_efd143296f08e159e0e992e35491236e);
+        
+
+        circle_marker_f42f9b131004fe11c0b4dde19bd27a26.bindPopup(popup_69deff9b7a2c41aa9d6c788565b49fa2)
+        ;
+
+        
+    
+    
+            var circle_marker_6b0b3564277b1de8d0c5eb45061f67a4 = L.circleMarker(
+                [53.54689636518132, 10.004968591099097],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_c314a4acc3b0d8e0511f3e728265d47c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_47a42cc36dc31955f4c2a348895c6a78 = $(`<div id="html_47a42cc36dc31955f4c2a348895c6a78" style="width: 100.0%; height: 100.0%;"><b>Deichtorhallen</b><br>Cluster: 1<br>Ø-Preis: 2.00 €/h</div>`)[0];
+            popup_c314a4acc3b0d8e0511f3e728265d47c.setContent(html_47a42cc36dc31955f4c2a348895c6a78);
+        
+
+        circle_marker_6b0b3564277b1de8d0c5eb45061f67a4.bindPopup(popup_c314a4acc3b0d8e0511f3e728265d47c)
+        ;
+
+        
+    
+    
+            var circle_marker_696bec5af31c567c764d81d6c8187e3b = L.circleMarker(
+                [53.55121608807634, 9.985204032574725],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_4626c2f2eac9ad50f765a7fd9c69dacf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_edeb5f1929b7904fc04cfe28343e05dc = $(`<div id="html_edeb5f1929b7904fc04cfe28343e05dc" style="width: 100.0%; height: 100.0%;"><b>Deutsch Japanisches Zentrum</b><br>Cluster: 1<br>Ø-Preis: 3.00 €/h</div>`)[0];
+            popup_4626c2f2eac9ad50f765a7fd9c69dacf.setContent(html_edeb5f1929b7904fc04cfe28343e05dc);
+        
+
+        circle_marker_696bec5af31c567c764d81d6c8187e3b.bindPopup(popup_4626c2f2eac9ad50f765a7fd9c69dacf)
+        ;
+
+        
+    
+    
+            var circle_marker_6eff28a2ba4ffbcd943d230433cb5e18 = L.circleMarker(
+                [53.60107971545933, 9.975545330969751],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_a793bb431acbbdd1526b1ecc39d3362d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c7506c0dcbd5952cb629ac6b495f877b = $(`<div id="html_c7506c0dcbd5952cb629ac6b495f877b" style="width: 100.0%; height: 100.0%;"><b>EKZ Nedderfeld</b><br>Cluster: 0<br>Ø-Preis: 1.50 €/h</div>`)[0];
+            popup_a793bb431acbbdd1526b1ecc39d3362d.setContent(html_c7506c0dcbd5952cb629ac6b495f877b);
+        
+
+        circle_marker_6eff28a2ba4ffbcd943d230433cb5e18.bindPopup(popup_a793bb431acbbdd1526b1ecc39d3362d)
+        ;
+
+        
+    
+    
+            var circle_marker_b94d224f0d048aaf660c2282035858ad = L.circleMarker(
+                [53.54248537921694, 10.001305675325275],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_ba193142639e537f3a1d3b7719e6d9c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f1da0ffe979ff62ad4e8a2f2550ff971 = $(`<div id="html_f1da0ffe979ff62ad4e8a2f2550ff971" style="width: 100.0%; height: 100.0%;"><b>Elbarkaden</b><br>Cluster: 1<br>Ø-Preis: 2.50 €/h</div>`)[0];
+            popup_ba193142639e537f3a1d3b7719e6d9c6.setContent(html_f1da0ffe979ff62ad4e8a2f2550ff971);
+        
+
+        circle_marker_b94d224f0d048aaf660c2282035858ad.bindPopup(popup_ba193142639e537f3a1d3b7719e6d9c6)
+        ;
+
+        
+    
+    
+            var circle_marker_e0eedb1a8b882a667cfe9ffc6e90bb13 = L.circleMarker(
+                [53.54130630706218, 9.98482018276581],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_66823fb9bf9e887e4f6f807298505ff9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d46e1346f5f7954e30dec50f2770ed5a = $(`<div id="html_d46e1346f5f7954e30dec50f2770ed5a" style="width: 100.0%; height: 100.0%;"><b>Elbphilharmonie</b><br>Cluster: 4<br>Ø-Preis: 5.00 €/h</div>`)[0];
+            popup_66823fb9bf9e887e4f6f807298505ff9.setContent(html_d46e1346f5f7954e30dec50f2770ed5a);
+        
+
+        circle_marker_e0eedb1a8b882a667cfe9ffc6e90bb13.bindPopup(popup_66823fb9bf9e887e4f6f807298505ff9)
+        ;
+
+        
+    
+    
+            var circle_marker_62467355fec41d3e4a754630957ae36e = L.circleMarker(
+                [53.55194755454146, 9.996677118135088],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_22cb38925248da52fc7dc4a4ba1bb507 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d207211280ac707b589e9cf30bc228a = $(`<div id="html_7d207211280ac707b589e9cf30bc228a" style="width: 100.0%; height: 100.0%;"><b>Europa-Passage</b><br>Cluster: 1<br>Ø-Preis: 2.50 €/h</div>`)[0];
+            popup_22cb38925248da52fc7dc4a4ba1bb507.setContent(html_7d207211280ac707b589e9cf30bc228a);
+        
+
+        circle_marker_62467355fec41d3e4a754630957ae36e.bindPopup(popup_22cb38925248da52fc7dc4a4ba1bb507)
+        ;
+
+        
+    
+    
+            var circle_marker_cfb4f08c141d795722b8c52fdfe7eb2b = L.circleMarker(
+                [53.58813434616128, 9.973031296836815],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_6c8af7d5891b839ed72f91a1c3e2d450 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d24974ff759f8d7b293e763c25e65a50 = $(`<div id="html_d24974ff759f8d7b293e763c25e65a50" style="width: 100.0%; height: 100.0%;"><b>Facharztklinik</b><br>Cluster: 0<br>Ø-Preis: 5.00 €/h</div>`)[0];
+            popup_6c8af7d5891b839ed72f91a1c3e2d450.setContent(html_d24974ff759f8d7b293e763c25e65a50);
+        
+
+        circle_marker_cfb4f08c141d795722b8c52fdfe7eb2b.bindPopup(popup_6c8af7d5891b839ed72f91a1c3e2d450)
+        ;
+
+        
+    
+    
+            var circle_marker_48fefe684f5bfd7e8ecaa54f327c0b5a = L.circleMarker(
+                [53.57933340440343, 9.976418374527569],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_6dedd20e15282615092f36509b3bd567 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_88c1de044cec9058acad7043d45cfbad = $(`<div id="html_88c1de044cec9058acad7043d45cfbad" style="width: 100.0%; height: 100.0%;"><b>Falkenried</b><br>Cluster: 0<br>Ø-Preis: 2.50 €/h</div>`)[0];
+            popup_6dedd20e15282615092f36509b3bd567.setContent(html_88c1de044cec9058acad7043d45cfbad);
+        
+
+        circle_marker_48fefe684f5bfd7e8ecaa54f327c0b5a.bindPopup(popup_6dedd20e15282615092f36509b3bd567)
+        ;
+
+        
+    
+    
+            var circle_marker_70b6cf8bd5954bd801c50fb4826e663c = L.circleMarker(
+                [53.550281161159205, 9.98566120635301],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_a0fdb3968e31d177ea5b19cb459d5e7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0fe28cd91b949a3359fffed38b7b5994 = $(`<div id="html_0fe28cd91b949a3359fffed38b7b5994" style="width: 100.0%; height: 100.0%;"><b>Fleethof</b><br>Cluster: 1<br>Ø-Preis: 3.00 €/h</div>`)[0];
+            popup_a0fdb3968e31d177ea5b19cb459d5e7c.setContent(html_0fe28cd91b949a3359fffed38b7b5994);
+        
+
+        circle_marker_70b6cf8bd5954bd801c50fb4826e663c.bindPopup(popup_a0fdb3968e31d177ea5b19cb459d5e7c)
+        ;
+
+        
+    
+    
+            var circle_marker_9a9e1221c70364799bbb8367d32ce1f1 = L.circleMarker(
+                [53.58642008165751, 10.092241007374009],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_6eb544d94274729b294ea57e589f07e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9fc484b3a7b4b48f9dfe272bba521c44 = $(`<div id="html_9fc484b3a7b4b48f9dfe272bba521c44" style="width: 100.0%; height: 100.0%;"><b>Friedrich-Ebert-Damm</b><br>Cluster: 3<br>Ø-Preis: 1.50 €/h</div>`)[0];
+            popup_6eb544d94274729b294ea57e589f07e3.setContent(html_9fc484b3a7b4b48f9dfe272bba521c44);
+        
+
+        circle_marker_9a9e1221c70364799bbb8367d32ce1f1.bindPopup(popup_6eb544d94274729b294ea57e589f07e3)
+        ;
+
+        
+    
+    
+            var circle_marker_4858fbc92f59efbc13b8cd6d15d7a9de = L.circleMarker(
+                [53.54832019600793, 9.996296599034896],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_28ca79a964d2cb2676cd9df8a6e03c66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb5c93d913904bdf061d5dfcedc35f36 = $(`<div id="html_cb5c93d913904bdf061d5dfcedc35f36" style="width: 100.0%; height: 100.0%;"><b>Große Reichenstraße</b><br>Cluster: 4<br>Ø-Preis: 4.00 €/h</div>`)[0];
+            popup_28ca79a964d2cb2676cd9df8a6e03c66.setContent(html_cb5c93d913904bdf061d5dfcedc35f36);
+        
+
+        circle_marker_4858fbc92f59efbc13b8cd6d15d7a9de.bindPopup(popup_28ca79a964d2cb2676cd9df8a6e03c66)
+        ;
+
+        
+    
+    
+            var circle_marker_1d6f93f47ecdf8934911b2e5d96938d9 = L.circleMarker(
+                [53.557532064624425, 9.986815010597264],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_4a4838440ab67894a3458487d85b882c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f771c4d4be9351305a71778d31cfc15b = $(`<div id="html_f771c4d4be9351305a71778d31cfc15b" style="width: 100.0%; height: 100.0%;"><b>Gänsemarkt</b><br>Cluster: 4<br>Ø-Preis: 4.50 €/h</div>`)[0];
+            popup_4a4838440ab67894a3458487d85b882c.setContent(html_f771c4d4be9351305a71778d31cfc15b);
+        
+
+        circle_marker_1d6f93f47ecdf8934911b2e5d96938d9.bindPopup(popup_4a4838440ab67894a3458487d85b882c)
+        ;
+
+        
+    
+    
+            var circle_marker_acd1a257da6b8e848234d77e7495f399 = L.circleMarker(
+                [53.545108167318574, 9.973081438994878],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_79c448e2baf24f89478ada7c32336845 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_30732545f0f1922069f9358dbf80ed52 = $(`<div id="html_30732545f0f1922069f9358dbf80ed52" style="width: 100.0%; height: 100.0%;"><b>Hafentor</b><br>Cluster: 4<br>Ø-Preis: 4.00 €/h</div>`)[0];
+            popup_79c448e2baf24f89478ada7c32336845.setContent(html_30732545f0f1922069f9358dbf80ed52);
+        
+
+        circle_marker_acd1a257da6b8e848234d77e7495f399.bindPopup(popup_79c448e2baf24f89478ada7c32336845)
+        ;
+
+        
+    
+    
+            var circle_marker_0ec25aa620b4553b70b18a6a62897d1e = L.circleMarker(
+                [53.553183045098, 9.93330151235029],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_c46697062d8f6a1cd5c4446651c55a4c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_97c0ee8b1a00b82109b99f79839d02a2 = $(`<div id="html_97c0ee8b1a00b82109b99f79839d02a2" style="width: 100.0%; height: 100.0%;"><b>Hahnenkamp</b><br>Cluster: 2<br>Ø-Preis: 1.33 €/h</div>`)[0];
+            popup_c46697062d8f6a1cd5c4446651c55a4c.setContent(html_97c0ee8b1a00b82109b99f79839d02a2);
+        
+
+        circle_marker_0ec25aa620b4553b70b18a6a62897d1e.bindPopup(popup_c46697062d8f6a1cd5c4446651c55a4c)
+        ;
+
+        
+    
+    
+            var circle_marker_f0ead0e601592465e64921284721ea3f = L.circleMarker(
+                [53.57525142006625, 10.033416445382796],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_bb942ed2ecc90d55079c43895a1f2401 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06235d80b815104d38a791e4a1de681e = $(`<div id="html_06235d80b815104d38a791e4a1de681e" style="width: 100.0%; height: 100.0%;"><b>Hamburger Meile</b><br>Cluster: 3<br>Ø-Preis: 1.00 €/h</div>`)[0];
+            popup_bb942ed2ecc90d55079c43895a1f2401.setContent(html_06235d80b815104d38a791e4a1de681e);
+        
+
+        circle_marker_f0ead0e601592465e64921284721ea3f.bindPopup(popup_bb942ed2ecc90d55079c43895a1f2401)
+        ;
+
+        
+    
+    
+            var circle_marker_90f145043b28ca8a52bf11e108448a32 = L.circleMarker(
+                [53.55381964157093, 10.01060735633889],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_bd61fd24513d3c40c1279996e0a9ea0b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe8091aacc21f4c62edc13e8566b816e = $(`<div id="html_fe8091aacc21f4c62edc13e8566b816e" style="width: 100.0%; height: 100.0%;"><b>Hansa- Theater</b><br>Cluster: 1<br>Ø-Preis: 2.00 €/h</div>`)[0];
+            popup_bd61fd24513d3c40c1279996e0a9ea0b.setContent(html_fe8091aacc21f4c62edc13e8566b816e);
+        
+
+        circle_marker_90f145043b28ca8a52bf11e108448a32.bindPopup(popup_bd61fd24513d3c40c1279996e0a9ea0b)
+        ;
+
+        
+    
+    
+            var circle_marker_0695aea926f67c765027328b74240115 = L.circleMarker(
+                [53.55364513139252, 9.98747715603032],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_733414cc476628509ef8cc3ed3f60b5e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e09aa3e6004a176c840479f2eb46371 = $(`<div id="html_8e09aa3e6004a176c840479f2eb46371" style="width: 100.0%; height: 100.0%;"><b>Hanse-Viertel</b><br>Cluster: 4<br>Ø-Preis: 3.50 €/h</div>`)[0];
+            popup_733414cc476628509ef8cc3ed3f60b5e.setContent(html_8e09aa3e6004a176c840479f2eb46371);
+        
+
+        circle_marker_0695aea926f67c765027328b74240115.bindPopup(popup_733414cc476628509ef8cc3ed3f60b5e)
+        ;
+
+        
+    
+    
+            var circle_marker_45f6c5bfc487f110dc867bca75b11bcd = L.circleMarker(
+                [53.55646497762062, 10.004742529351688],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_849c953a388791c71188f9e28813bee6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b83b034d6ddb00be93ecaaa8381532e0 = $(`<div id="html_b83b034d6ddb00be93ecaaa8381532e0" style="width: 100.0%; height: 100.0%;"><b>Holzdamm / Ibis</b><br>Cluster: 1<br>Ø-Preis: 3.00 €/h</div>`)[0];
+            popup_849c953a388791c71188f9e28813bee6.setContent(html_b83b034d6ddb00be93ecaaa8381532e0);
+        
+
+        circle_marker_45f6c5bfc487f110dc867bca75b11bcd.bindPopup(popup_849c953a388791c71188f9e28813bee6)
+        ;
+
+        
+    
+    
+            var circle_marker_2cf89420ea7681d8e0ca4ee7b2c81e7c = L.circleMarker(
+                [53.54419449053596, 9.942748304450651],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_4f00eb70904be3ba0ccc5c2c2e7bebcc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f1ea06a1228591f7839101f7df26aaff = $(`<div id="html_f1ea06a1228591f7839101f7df26aaff" style="width: 100.0%; height: 100.0%;"><b>Holzhafen</b><br>Cluster: 2<br>Ø-Preis: 2.50 €/h</div>`)[0];
+            popup_4f00eb70904be3ba0ccc5c2c2e7bebcc.setContent(html_f1ea06a1228591f7839101f7df26aaff);
+        
+
+        circle_marker_2cf89420ea7681d8e0ca4ee7b2c81e7c.bindPopup(popup_4f00eb70904be3ba0ccc5c2c2e7bebcc)
+        ;
+
+        
+    
+    
+            var circle_marker_b3eebee25cf9764738ac656d4bce9eba = L.circleMarker(
+                [53.57508649733133, 9.952692454498187],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_8490175f6a630f0069318d772964b306 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9cfd5fc5d3b06508e9b2cdb2da2216cd = $(`<div id="html_9cfd5fc5d3b06508e9b2cdb2da2216cd" style="width: 100.0%; height: 100.0%;"><b>Karstadt Eimsbüttel</b><br>Cluster: 0<br>Ø-Preis: 2.00 €/h</div>`)[0];
+            popup_8490175f6a630f0069318d772964b306.setContent(html_9cfd5fc5d3b06508e9b2cdb2da2216cd);
+        
+
+        circle_marker_b3eebee25cf9764738ac656d4bce9eba.bindPopup(popup_8490175f6a630f0069318d772964b306)
+        ;
+
+        
+    
+    
+            var circle_marker_859d4f697259019b493bd491e891def7 = L.circleMarker(
+                [53.57259680414988, 10.065573516852108],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_0d1664094ff8c13a3cda2a8e4f5c537a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b45a6aaa9d6cbc745671e28523a636aa = $(`<div id="html_b45a6aaa9d6cbc745671e28523a636aa" style="width: 100.0%; height: 100.0%;"><b>Karstadt Wandsbek Parkhaus 1</b><br>Cluster: 3<br>Ø-Preis: 1.20 €/h</div>`)[0];
+            popup_0d1664094ff8c13a3cda2a8e4f5c537a.setContent(html_b45a6aaa9d6cbc745671e28523a636aa);
+        
+
+        circle_marker_859d4f697259019b493bd491e891def7.bindPopup(popup_0d1664094ff8c13a3cda2a8e4f5c537a)
+        ;
+
+        
+    
+    
+            var circle_marker_a334270b02db6fef7a3a76ad7c9efaa2 = L.circleMarker(
+                [53.57367322647623, 10.067200408235554],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_3aa9dab52710c720ee67790f918b43bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4b2fda2220662ab4d6bb923a7180c7fc = $(`<div id="html_4b2fda2220662ab4d6bb923a7180c7fc" style="width: 100.0%; height: 100.0%;"><b>Karstadt Wandsbek Parkhaus 2</b><br>Cluster: 3<br>Ø-Preis: 1.20 €/h</div>`)[0];
+            popup_3aa9dab52710c720ee67790f918b43bd.setContent(html_4b2fda2220662ab4d6bb923a7180c7fc);
+        
+
+        circle_marker_a334270b02db6fef7a3a76ad7c9efaa2.bindPopup(popup_3aa9dab52710c720ee67790f918b43bd)
+        ;
+
+        
+    
+    
+            var circle_marker_d55e39a5103d771c09a81d7b49a091d2 = L.circleMarker(
+                [53.55065418972926, 10.004655274423786],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_1a9097cafa4c1cfe517dd9396d96d9de = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d78857e49836d478f41aeaef0370b83 = $(`<div id="html_2d78857e49836d478f41aeaef0370b83" style="width: 100.0%; height: 100.0%;"><b>Kaufhof (Galeria Kaufhof)</b><br>Cluster: 1<br>Ø-Preis: 3.00 €/h</div>`)[0];
+            popup_1a9097cafa4c1cfe517dd9396d96d9de.setContent(html_2d78857e49836d478f41aeaef0370b83);
+        
+
+        circle_marker_d55e39a5103d771c09a81d7b49a091d2.bindPopup(popup_1a9097cafa4c1cfe517dd9396d96d9de)
+        ;
+
+        
+    
+    
+            var circle_marker_fe2514f6c06f1a9f345d84d4a75cc19b = L.circleMarker(
+                [53.55601583283451, 10.001598229321823],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_846e4384c25fa5eaffd27e09171239b4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93387a6ea8562619b7a770d8f3fdfb45 = $(`<div id="html_93387a6ea8562619b7a770d8f3fdfb45" style="width: 100.0%; height: 100.0%;"><b>Kunsthalle</b><br>Cluster: 4<br>Ø-Preis: 4.00 €/h</div>`)[0];
+            popup_846e4384c25fa5eaffd27e09171239b4.setContent(html_93387a6ea8562619b7a770d8f3fdfb45);
+        
+
+        circle_marker_fe2514f6c06f1a9f345d84d4a75cc19b.bindPopup(popup_846e4384c25fa5eaffd27e09171239b4)
+        ;
+
+        
+    
+    
+            var circle_marker_9138398cd557fd07879dded897a4551f = L.circleMarker(
+                [53.54640491638306, 9.98157972392045],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_13296e61ade86038a24623a34d4304e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e954eb82301670bb9482c3a55ae674fd = $(`<div id="html_e954eb82301670bb9482c3a55ae674fd" style="width: 100.0%; height: 100.0%;"><b>Madison</b><br>Cluster: 1<br>Ø-Preis: 2.50 €/h</div>`)[0];
+            popup_13296e61ade86038a24623a34d4304e3.setContent(html_e954eb82301670bb9482c3a55ae674fd);
+        
+
+        circle_marker_9138398cd557fd07879dded897a4551f.bindPopup(popup_13296e61ade86038a24623a34d4304e3)
+        ;
+
+        
+    
+    
+            var circle_marker_cfae0762abf0802f272b3cdd62db6157 = L.circleMarker(
+                [53.59037652189612, 9.98512154336242],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_91ce58abfe2eaae21bdb2a7967407fa5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c2d05ae94145ac932c8737d6944b4440 = $(`<div id="html_c2d05ae94145ac932c8737d6944b4440" style="width: 100.0%; height: 100.0%;"><b>Marie-Jonas-Platz</b><br>Cluster: 0<br>Ø-Preis: 3.00 €/h</div>`)[0];
+            popup_91ce58abfe2eaae21bdb2a7967407fa5.setContent(html_c2d05ae94145ac932c8737d6944b4440);
+        
+
+        circle_marker_cfae0762abf0802f272b3cdd62db6157.bindPopup(popup_91ce58abfe2eaae21bdb2a7967407fa5)
+        ;
+
+        
+    
+    
+            var circle_marker_0571449464759b2687411d6dcb4595be = L.circleMarker(
+                [53.55487275596602, 9.986674510426782],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_934bd8e31752d88dc63b9e29dc2b4394 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2aab0127ab4088614964e0abe878ac3 = $(`<div id="html_a2aab0127ab4088614964e0abe878ac3" style="width: 100.0%; height: 100.0%;"><b>Marriott</b><br>Cluster: 4<br>Ø-Preis: 4.50 €/h</div>`)[0];
+            popup_934bd8e31752d88dc63b9e29dc2b4394.setContent(html_a2aab0127ab4088614964e0abe878ac3);
+        
+
+        circle_marker_0571449464759b2687411d6dcb4595be.bindPopup(popup_934bd8e31752d88dc63b9e29dc2b4394)
+        ;
+
+        
+    
+    
+            var circle_marker_62f5483ce81371e69c03bb34bcfd6acf = L.circleMarker(
+                [53.5532304667918, 9.93327437342652],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_ac8174df6fc0d2a87b289fbb4d6bf24c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_706a8df752e7afbe21da7224efcfdacb = $(`<div id="html_706a8df752e7afbe21da7224efcfdacb" style="width: 100.0%; height: 100.0%;"><b>Mercado (Einkaufszentrum)</b><br>Cluster: 2<br>Ø-Preis: 1.00 €/h</div>`)[0];
+            popup_ac8174df6fc0d2a87b289fbb4d6bf24c.setContent(html_706a8df752e7afbe21da7224efcfdacb);
+        
+
+        circle_marker_62f5483ce81371e69c03bb34bcfd6acf.bindPopup(popup_ac8174df6fc0d2a87b289fbb4d6bf24c)
+        ;
+
+        
+    
+    
+            var circle_marker_bd3e9e229bd268752eb524d7c93c171e = L.circleMarker(
+                [53.56092728553542, 9.973745028141993],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_c825e0b55adac72845c89efd62285b26 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d663d2af02bf9277cd8d335b919561db = $(`<div id="html_d663d2af02bf9277cd8d335b919561db" style="width: 100.0%; height: 100.0%;"><b>Messe-Mitte</b><br>Cluster: 1<br>Ø-Preis: 2.00 €/h</div>`)[0];
+            popup_c825e0b55adac72845c89efd62285b26.setContent(html_d663d2af02bf9277cd8d335b919561db);
+        
+
+        circle_marker_bd3e9e229bd268752eb524d7c93c171e.bindPopup(popup_c825e0b55adac72845c89efd62285b26)
+        ;
+
+        
+    
+    
+            var circle_marker_2452ae91a371b926042ddaef231cf3f5 = L.circleMarker(
+                [53.55976688354804, 9.98007754485828],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_410bd5852fcea618849f901783602ccd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e1b1ffb5033a438e3a322f570c18557 = $(`<div id="html_9e1b1ffb5033a438e3a322f570c18557" style="width: 100.0%; height: 100.0%;"><b>Messe-Ost</b><br>Cluster: 1<br>Ø-Preis: 2.00 €/h</div>`)[0];
+            popup_410bd5852fcea618849f901783602ccd.setContent(html_9e1b1ffb5033a438e3a322f570c18557);
+        
+
+        circle_marker_2452ae91a371b926042ddaef231cf3f5.bindPopup(popup_410bd5852fcea618849f901783602ccd)
+        ;
+
+        
+    
+    
+            var circle_marker_86b0f6c03c33be1a5879f92c5891defb = L.circleMarker(
+                [53.54651605955261, 9.978062986772024],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_959353928f34110a674fd769648f0c66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eabd23fa3403767a146927969f693d47 = $(`<div id="html_eabd23fa3403767a146927969f693d47" style="width: 100.0%; height: 100.0%;"><b>Michel-Garage</b><br>Cluster: 4<br>Ø-Preis: 4.00 €/h</div>`)[0];
+            popup_959353928f34110a674fd769648f0c66.setContent(html_eabd23fa3403767a146927969f693d47);
+        
+
+        circle_marker_86b0f6c03c33be1a5879f92c5891defb.bindPopup(popup_959353928f34110a674fd769648f0c66)
+        ;
+
+        
+    
+    
+            var circle_marker_be2876f9429fec08bf1655d92300a426 = L.circleMarker(
+                [53.55051812486837, 9.967811308519074],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_8afd7af2bf00f2d121154077dd315019 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34f61dd638b0596d3e5d4c039d10ea3f = $(`<div id="html_34f61dd638b0596d3e5d4c039d10ea3f" style="width: 100.0%; height: 100.0%;"><b>Millerntor</b><br>Cluster: 1<br>Ø-Preis: 3.00 €/h</div>`)[0];
+            popup_8afd7af2bf00f2d121154077dd315019.setContent(html_34f61dd638b0596d3e5d4c039d10ea3f);
+        
+
+        circle_marker_be2876f9429fec08bf1655d92300a426.bindPopup(popup_8afd7af2bf00f2d121154077dd315019)
+        ;
+
+        
+    
+    
+            var circle_marker_ca6985fffcd6f972913c8f70dcd5bc96 = L.circleMarker(
+                [53.571875460255626, 10.028111880477097],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_d07a2c4669079470623f9130c0f02a3d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c9abe8228aaeb193451bc5ccc743eb62 = $(`<div id="html_c9abe8228aaeb193451bc5ccc743eb62" style="width: 100.0%; height: 100.0%;"><b>Mundsburg Center</b><br>Cluster: 3<br>Ø-Preis: 1.00 €/h</div>`)[0];
+            popup_d07a2c4669079470623f9130c0f02a3d.setContent(html_c9abe8228aaeb193451bc5ccc743eb62);
+        
+
+        circle_marker_ca6985fffcd6f972913c8f70dcd5bc96.bindPopup(popup_d07a2c4669079470623f9130c0f02a3d)
+        ;
+
+        
+    
+    
+            var circle_marker_3153fe7d668994e4a7fae9f29aa7e42c = L.circleMarker(
+                [53.56291029864832, 9.949652510012193],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_2eb027d4e9a9070a9ab81e052803cec0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8e172aae22d9ad4e8fd93501f79773b = $(`<div id="html_d8e172aae22d9ad4e8fd93501f79773b" style="width: 100.0%; height: 100.0%;"><b>Neue Flora</b><br>Cluster: 1<br>Ø-Preis: 2.50 €/h</div>`)[0];
+            popup_2eb027d4e9a9070a9ab81e052803cec0.setContent(html_d8e172aae22d9ad4e8fd93501f79773b);
+        
+
+        circle_marker_3153fe7d668994e4a7fae9f29aa7e42c.bindPopup(popup_2eb027d4e9a9070a9ab81e052803cec0)
+        ;
+
+        
+    
+    
+            var circle_marker_b30eb6346c1ba68d2ea270580cff8160 = L.circleMarker(
+                [53.55127239984349, 9.941704801035735],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_49da4b496169ae4724320821eda9b201 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2f59c21dcef54c4296b902263f67c29e = $(`<div id="html_2f59c21dcef54c4296b902263f67c29e" style="width: 100.0%; height: 100.0%;"><b>Neues Forum</b><br>Cluster: 2<br>Ø-Preis: 1.50 €/h</div>`)[0];
+            popup_49da4b496169ae4724320821eda9b201.setContent(html_2f59c21dcef54c4296b902263f67c29e);
+        
+
+        circle_marker_b30eb6346c1ba68d2ea270580cff8160.bindPopup(popup_49da4b496169ae4724320821eda9b201)
+        ;
+
+        
+    
+    
+            var circle_marker_ebb95b9871df051324cb55d212524c66 = L.circleMarker(
+                [53.551997729821366, 10.019774160861513],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_eeacc06046ff9a542fcda034e13c6c00 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a8875958c364d118c62f99196207fa7 = $(`<div id="html_0a8875958c364d118c62f99196207fa7" style="width: 100.0%; height: 100.0%;"><b>Neues Steintor</b><br>Cluster: 1<br>Ø-Preis: 1.30 €/h</div>`)[0];
+            popup_eeacc06046ff9a542fcda034e13c6c00.setContent(html_0a8875958c364d118c62f99196207fa7);
+        
+
+        circle_marker_ebb95b9871df051324cb55d212524c66.bindPopup(popup_eeacc06046ff9a542fcda034e13c6c00)
+        ;
+
+        
+    
+    
+            var circle_marker_e1d8767a8bb850a1d098baed2c7f2af7 = L.circleMarker(
+                [53.55114231148847, 9.9656003098587],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_b07f7c1f1842e101552ee263c72aacdd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c78691db0ef73b434348d6d0b3f78b4 = $(`<div id="html_8c78691db0ef73b434348d6d0b3f78b4" style="width: 100.0%; height: 100.0%;"><b>Nomis Quartier</b><br>Cluster: 4<br>Ø-Preis: 5.60 €/h</div>`)[0];
+            popup_b07f7c1f1842e101552ee263c72aacdd.setContent(html_8c78691db0ef73b434348d6d0b3f78b4);
+        
+
+        circle_marker_e1d8767a8bb850a1d098baed2c7f2af7.bindPopup(popup_b07f7c1f1842e101552ee263c72aacdd)
+        ;
+
+        
+    
+    
+            var circle_marker_0ff948118ae0ea4e8b21ab234316ada0 = L.circleMarker(
+                [53.55829801343148, 9.901260745342192],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_8a15394cbd519ea4f96e7ac772a71a1e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_957c1065ba08b7133b4d79d35739d580 = $(`<div id="html_957c1065ba08b7133b4d79d35739d580" style="width: 100.0%; height: 100.0%;"><b>Othmarschen Park</b><br>Cluster: 2<br>Ø-Preis: 2.00 €/h</div>`)[0];
+            popup_8a15394cbd519ea4f96e7ac772a71a1e.setContent(html_957c1065ba08b7133b4d79d35739d580);
+        
+
+        circle_marker_0ff948118ae0ea4e8b21ab234316ada0.bindPopup(popup_8a15394cbd519ea4f96e7ac772a71a1e)
+        ;
+
+        
+    
+    
+            var circle_marker_32caa17d29fbe7a3181c51a57b89e469 = L.circleMarker(
+                [53.55320622540989, 9.928344610847478],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_597d983dcf083736a67dbcb13786534d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4276c5158977b6ac4ed7bfa217efc288 = $(`<div id="html_4276c5158977b6ac4ed7bfa217efc288" style="width: 100.0%; height: 100.0%;"><b>Ottensen</b><br>Cluster: 2<br>Ø-Preis: 0.80 €/h</div>`)[0];
+            popup_597d983dcf083736a67dbcb13786534d.setContent(html_4276c5158977b6ac4ed7bfa217efc288);
+        
+
+        circle_marker_32caa17d29fbe7a3181c51a57b89e469.bindPopup(popup_597d983dcf083736a67dbcb13786534d)
+        ;
+
+        
+    
+    
+            var circle_marker_a8db4d88cc4d3aafe5c0022d1715c146 = L.circleMarker(
+                [53.551945936856725, 9.98664806692789],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_b32cf015a1766c7d7d2eb2949ed948b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e523a22cfe3cfb71173179c3c2a68706 = $(`<div id="html_e523a22cfe3cfb71173179c3c2a68706" style="width: 100.0%; height: 100.0%;"><b>Parkhaus Stadthöfe (Bleichenhof)</b><br>Cluster: 4<br>Ø-Preis: 3.90 €/h</div>`)[0];
+            popup_b32cf015a1766c7d7d2eb2949ed948b2.setContent(html_e523a22cfe3cfb71173179c3c2a68706);
+        
+
+        circle_marker_a8db4d88cc4d3aafe5c0022d1715c146.bindPopup(popup_b32cf015a1766c7d7d2eb2949ed948b2)
+        ;
+
+        
+    
+    
+            var circle_marker_b645062f90c71da3553ea8db88fab432 = L.circleMarker(
+                [53.543892755462906, 9.938025261422686],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_1aa4f53c94e1d1a025c54463eec97cda = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cfa73b0360ae1ac5001e08447363c01a = $(`<div id="html_cfa73b0360ae1ac5001e08447363c01a" style="width: 100.0%; height: 100.0%;"><b>Parkplatz Cruise Center</b><br>Cluster: 2<br>Ø-Preis: 2.00 €/h</div>`)[0];
+            popup_1aa4f53c94e1d1a025c54463eec97cda.setContent(html_cfa73b0360ae1ac5001e08447363c01a);
+        
+
+        circle_marker_b645062f90c71da3553ea8db88fab432.bindPopup(popup_1aa4f53c94e1d1a025c54463eec97cda)
+        ;
+
+        
+    
+    
+            var circle_marker_a3cd01304b0ca74e953dd69a1c0c84db = L.circleMarker(
+                [53.56113522935211, 9.987726812786669],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_a6ae229f5c0a912de1db3a26c79fab6c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b9a075f7368f762414ec839dedf95412 = $(`<div id="html_b9a075f7368f762414ec839dedf95412" style="width: 100.0%; height: 100.0%;"><b>Radison Blu</b><br>Cluster: 1<br>Ø-Preis: 3.00 €/h</div>`)[0];
+            popup_a6ae229f5c0a912de1db3a26c79fab6c.setContent(html_b9a075f7368f762414ec839dedf95412);
+        
+
+        circle_marker_a3cd01304b0ca74e953dd69a1c0c84db.bindPopup(popup_a6ae229f5c0a912de1db3a26c79fab6c)
+        ;
+
+        
+    
+    
+            var circle_marker_2162679a623006308a1bb0e2c64ba07b = L.circleMarker(
+                [53.54972928675748, 9.96690248491269],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_94d549142242543655fc51b875d65d87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5e7238b4b8a2a1d81f1eb797678ddac = $(`<div id="html_b5e7238b4b8a2a1d81f1eb797678ddac" style="width: 100.0%; height: 100.0%;"><b>Reeperbahn-Garagen (Spielbudenplatz)</b><br>Cluster: 1<br>Ø-Preis: 3.00 €/h</div>`)[0];
+            popup_94d549142242543655fc51b875d65d87.setContent(html_b5e7238b4b8a2a1d81f1eb797678ddac);
+        
+
+        circle_marker_2162679a623006308a1bb0e2c64ba07b.bindPopup(popup_94d549142242543655fc51b875d65d87)
+        ;
+
+        
+    
+    
+            var circle_marker_dc86607e9b1525d81fb811513e10ba6a = L.circleMarker(
+                [53.55677518863589, 9.967826149688705],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_f8e944a32fedc91b07cd0e703f1039b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a207f9788787e1907dc4fbec3f9b951 = $(`<div id="html_1a207f9788787e1907dc4fbec3f9b951" style="width: 100.0%; height: 100.0%;"><b>Rindermarkthalle</b><br>Cluster: 1<br>Ø-Preis: 2.50 €/h</div>`)[0];
+            popup_f8e944a32fedc91b07cd0e703f1039b6.setContent(html_1a207f9788787e1907dc4fbec3f9b951);
+        
+
+        circle_marker_dc86607e9b1525d81fb811513e10ba6a.bindPopup(popup_f8e944a32fedc91b07cd0e703f1039b6)
+        ;
+
+        
+    
+    
+            var circle_marker_4b4daeee9fca5e8755cb7d4c6d99ab79 = L.circleMarker(
+                [53.546796818961646, 9.985252563929128],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_a2ac83b6bf8f1333921dec203f0f1e9f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c53ff934c584f5d44371603801b4e25 = $(`<div id="html_0c53ff934c584f5d44371603801b4e25" style="width: 100.0%; height: 100.0%;"><b>Rödingsmarkt</b><br>Cluster: 1<br>Ø-Preis: 3.00 €/h</div>`)[0];
+            popup_a2ac83b6bf8f1333921dec203f0f1e9f.setContent(html_0c53ff934c584f5d44371603801b4e25);
+        
+
+        circle_marker_4b4daeee9fca5e8755cb7d4c6d99ab79.bindPopup(popup_a2ac83b6bf8f1333921dec203f0f1e9f)
+        ;
+
+        
+    
+    
+            var circle_marker_db4fab6147fc59973ce38d7a1bfdcabc = L.circleMarker(
+                [53.55058123954668, 10.00536821230994],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_d9029d827ee51ba7e3b008e01dfadf1d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8c4058a2bc941a69e3753e832809c24 = $(`<div id="html_d8c4058a2bc941a69e3753e832809c24" style="width: 100.0%; height: 100.0%;"><b>Saturn</b><br>Cluster: 1<br>Ø-Preis: 3.00 €/h</div>`)[0];
+            popup_d9029d827ee51ba7e3b008e01dfadf1d.setContent(html_d8c4058a2bc941a69e3753e832809c24);
+        
+
+        circle_marker_db4fab6147fc59973ce38d7a1bfdcabc.bindPopup(popup_d9029d827ee51ba7e3b008e01dfadf1d)
+        ;
+
+        
+    
+    
+            var circle_marker_e946e7751ac524f22190b7fdaf876b70 = L.circleMarker(
+                [53.55072783310138, 9.93850148328986],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_8c0b9c6673c62bc1d2e3e04b1259a44f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f241377478e34db055b5f9ded6671c83 = $(`<div id="html_f241377478e34db055b5f9ded6671c83" style="width: 100.0%; height: 100.0%;"><b>Schillerstraße (CCA)</b><br>Cluster: 2<br>Ø-Preis: 1.00 €/h</div>`)[0];
+            popup_8c0b9c6673c62bc1d2e3e04b1259a44f.setContent(html_f241377478e34db055b5f9ded6671c83);
+        
+
+        circle_marker_e946e7751ac524f22190b7fdaf876b70.bindPopup(popup_8c0b9c6673c62bc1d2e3e04b1259a44f)
+        ;
+
+        
+    
+    
+            var circle_marker_8a37f54bffc2530140bf0b153eb9eae6 = L.circleMarker(
+                [53.54354424813618, 9.994344158803813],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_c844526af168376878d9cbf0dca653e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_79b78f7c2f8f04082bf7d0df8b2806f1 = $(`<div id="html_79b78f7c2f8f04082bf7d0df8b2806f1" style="width: 100.0%; height: 100.0%;"><b>Speicherstadt</b><br>Cluster: 1<br>Ø-Preis: 2.50 €/h</div>`)[0];
+            popup_c844526af168376878d9cbf0dca653e6.setContent(html_79b78f7c2f8f04082bf7d0df8b2806f1);
+        
+
+        circle_marker_8a37f54bffc2530140bf0b153eb9eae6.bindPopup(popup_c844526af168376878d9cbf0dca653e6)
+        ;
+
+        
+    
+    
+            var circle_marker_132caa1c4bf54e070219bcdbe3985de2 = L.circleMarker(
+                [53.550021833031465, 10.014218676180413],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_613d123b5aa2f56d746a2696dc9a0ace = L.popup({"maxWidth": "100%"});
+
+        
+            var html_205af22b1214446f599e568a4009af7a = $(`<div id="html_205af22b1214446f599e568a4009af7a" style="width: 100.0%; height: 100.0%;"><b>StadtKontor Parking</b><br>Cluster: 1<br>Ø-Preis: 1.00 €/h</div>`)[0];
+            popup_613d123b5aa2f56d746a2696dc9a0ace.setContent(html_205af22b1214446f599e568a4009af7a);
+        
+
+        circle_marker_132caa1c4bf54e070219bcdbe3985de2.bindPopup(popup_613d123b5aa2f56d746a2696dc9a0ace)
+        ;
+
+        
+    
+    
+            var circle_marker_6964057e51be730ac49254fcfc3923f7 = L.circleMarker(
+                [53.54948551369198, 9.968112656180114],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_f659b7eed908d1dcb493957aeded3a32 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f6ce15f0b9836d256931d1a7538c18a = $(`<div id="html_6f6ce15f0b9836d256931d1a7538c18a" style="width: 100.0%; height: 100.0%;"><b>Tanzende Türme</b><br>Cluster: 4<br>Ø-Preis: 4.00 €/h</div>`)[0];
+            popup_f659b7eed908d1dcb493957aeded3a32.setContent(html_6f6ce15f0b9836d256931d1a7538c18a);
+        
+
+        circle_marker_6964057e51be730ac49254fcfc3923f7.bindPopup(popup_f659b7eed908d1dcb493957aeded3a32)
+        ;
+
+        
+    
+    
+            var circle_marker_a9be23cc747f2a76a03cd5d72ad6a209 = L.circleMarker(
+                [53.59026267555401, 9.974069107288718],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_705190a055bfd239e8dd8ff7f262b3d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_728719b887c4dc638309b04046920439 = $(`<div id="html_728719b887c4dc638309b04046920439" style="width: 100.0%; height: 100.0%;"><b>Uniklinik Eppendorf</b><br>Cluster: 0<br>Ø-Preis: 2.50 €/h</div>`)[0];
+            popup_705190a055bfd239e8dd8ff7f262b3d9.setContent(html_728719b887c4dc638309b04046920439);
+        
+
+        circle_marker_a9be23cc747f2a76a03cd5d72ad6a209.bindPopup(popup_705190a055bfd239e8dd8ff7f262b3d9)
+        ;
+
+        
+    
+    
+            var circle_marker_6a9628273ab07040ce62eb06ce08597d = L.circleMarker(
+                [53.57147007409933, 10.060427919584122],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_e281f835105bc22174dffe5097c1826e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_529f47207f5cdc476bfa090a2a389a66 = $(`<div id="html_529f47207f5cdc476bfa090a2a389a66" style="width: 100.0%; height: 100.0%;"><b>W 1</b><br>Cluster: 3<br>Ø-Preis: 1.20 €/h</div>`)[0];
+            popup_e281f835105bc22174dffe5097c1826e.setContent(html_529f47207f5cdc476bfa090a2a389a66);
+        
+
+        circle_marker_6a9628273ab07040ce62eb06ce08597d.bindPopup(popup_e281f835105bc22174dffe5097c1826e)
+        ;
+
+        
+    
+    
+            var circle_marker_889bc9620b0b1c56c07a70d8ea8ff5cd = L.circleMarker(
+                [53.59405229029723, 10.000426422582883],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_ee39e6692cab7ea124e63faff7ada53d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c28a42e43480cfb8033032dc0dafa8d = $(`<div id="html_3c28a42e43480cfb8033032dc0dafa8d" style="width: 100.0%; height: 100.0%;"><b>Winterhuder Markt</b><br>Cluster: 0<br>Ø-Preis: 1.50 €/h</div>`)[0];
+            popup_ee39e6692cab7ea124e63faff7ada53d.setContent(html_3c28a42e43480cfb8033032dc0dafa8d);
+        
+
+        circle_marker_889bc9620b0b1c56c07a70d8ea8ff5cd.bindPopup(popup_ee39e6692cab7ea124e63faff7ada53d)
+        ;
+
+        
+    
+    
+            var circle_marker_36b036939fd78b0d9b835a617875a647 = L.circleMarker(
+                [53.54157692179883, 9.997396929089277],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_5a33d320d361be30fd2e887835a53cfd);
+        
+    
+        var popup_822c04fbddb6054fff078df7ecd0ee05 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2f6120b43228c779c73e93b60a7448fd = $(`<div id="html_2f6120b43228c779c73e93b60a7448fd" style="width: 100.0%; height: 100.0%;"><b>Überseequartier Nord</b><br>Cluster: 1<br>Ø-Preis: 2.50 €/h</div>`)[0];
+            popup_822c04fbddb6054fff078df7ecd0ee05.setContent(html_2f6120b43228c779c73e93b60a7448fd);
+        
+
+        circle_marker_36b036939fd78b0d9b835a617875a647.bindPopup(popup_822c04fbddb6054fff078df7ecd0ee05)
+        ;
+
+        
+    
+</script>
+</html>
