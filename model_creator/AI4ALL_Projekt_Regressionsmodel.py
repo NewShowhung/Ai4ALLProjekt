@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 26 15:55:15 2025
-
-@author: GongChitmon2018
-"""
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -14,18 +7,18 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
-# โหลดข้อมูล
-df = pd.read_csv("C:/Users/GongChitmon2018/Documents/parkhaeuser_wetter_merged_allvars.csv")
+# Daten laden
+df = pd.read_csv("parkhaeuser_wetter_merged_allvars.csv")
 features = ['temp', 'humidity', 'wind_speed', 'wind_gust', 'precip']
 target = 'Alsterhaus_auslastung'
 df_model = df.dropna(subset=features + [target])
 X = df_model[features]
 y = df_model[target]
 
-# แบ่ง train+val กับ test (80/20)
+# Aufteilen in Training+Validierung und Test (80/20)
 X_trainval, X_test, y_trainval, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# เตรียม pipeline สำหรับ linear และ polynomial regression
+# Pipeline für lineare und polynomiale Regression vorbereiten
 linear_pipeline = Pipeline([
     ('scaler', StandardScaler()),
     ('lin_reg', LinearRegression())
@@ -36,17 +29,17 @@ poly_pipeline = Pipeline([
     ('lin_reg', LinearRegression())
 ])
 
-# Cross-validation 10 รอบ หาโมเดลที่ดีที่สุดด้วย validation set
+# 10-fache Cross-Validation, bestes Modell anhand Validierungsmenge auswählen
 best_linear_mse = np.inf
 best_poly_mse = np.inf
 best_linear_model = None
 best_poly_model = None
 
 for i in range(10):
-    # 25% ของ trainval เป็น validation (=> 60/20/20)
+    # 25% der Trainingsmenge als Validierung (=> 60/20/20)
     X_train, X_val, y_train, y_val = train_test_split(X_trainval, y_trainval, test_size=0.25, random_state=100+i)
     
-    # Linear
+    # Lineare Regression
     linear_pipeline.fit(X_train, y_train)
     y_val_pred_lin = linear_pipeline.predict(X_val)
     y_val_pred_lin = np.clip(y_val_pred_lin, 0, None)
@@ -59,7 +52,7 @@ for i in range(10):
         ])
         best_linear_model.fit(X_train, y_train)
     
-    # Poly
+    # Polynomieller Regression
     poly_pipeline.fit(X_train, y_train)
     y_val_pred_poly = poly_pipeline.predict(X_val)
     y_val_pred_poly = np.clip(y_val_pred_poly, 0, None)
@@ -73,7 +66,7 @@ for i in range(10):
         ])
         best_poly_model.fit(X_train, y_train)
 
-# ทดสอบกับ test set
+# Test auf Testdaten
 y_pred_lin = best_linear_model.predict(X_test)
 y_pred_lin = np.clip(y_pred_lin, 0, 87)
 y_pred_poly = best_poly_model.predict(X_test)
@@ -86,7 +79,7 @@ mae_poly = mean_absolute_error(y_test, y_pred_poly)
 mse_poly = mean_squared_error(y_test, y_pred_poly)
 r2_poly = r2_score(y_test, y_pred_poly)
 
-# Plot ผลลัพธ์
+# Grafische Darstellung der Ergebnisse
 plt.figure()
 plt.scatter(y_test, y_pred_lin, label='Lineare Regression')
 plt.scatter(y_test, y_pred_poly, label='Polynomiale Regression (Grad 2)')
